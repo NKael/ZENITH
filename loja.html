@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loja | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="section shop">
+        <div class="container">
+            <h2>COLEÇÃO ZENITH</h2>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <span class="search-icon">⌕</span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar produtos...">
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                <button class="filter-btn" data-filter="moletons">Moletons</button>
+                <button class="filter-btn" data-filter="acessorios">Acessórios</button>
+            </div>
+
+            <!-- Sort -->
+            <div class="sort-row" style="display:flex; justify-content:center; margin: 0 0 2.5rem;">
+                <select id="sortProducts" class="filter-btn" style="cursor:pointer;">
+                    <option value="default">Ordenar</option>
+                    <option value="price-asc">Menor preço</option>
+                    <option value="price-desc">Maior preço</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1: Camiseta APEX -->
+                <div class="product-card" data-category="camisetas" data-price="0" data-name="">
+                    <a href="produto.html?id=1">
+                        <div class="product-image-wrapper">
+                            <div class="product-placeholder">★</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta APEX</h3>
+                            <p>Camiseta oversized premium com design minimalista. Representa o ponto mais alto de sua jornada.</p>
+
+                            <div class="product-price">
+                                <span class="price">R$ 89,90</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 2: Camiseta SUMMIT -->
+                <div class="product-card" data-category="camisetas" data-price="0" data-name="">
+                    <a href="produto.html?id=2">
+                        <div class="product-image-wrapper">
+                            <div class="product-placeholder">★</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta SUMMIT</h3>
+                            <p>Design clean e sofisticado. Para quem já conquistou o cume e busca novos horizontes.</p>
+
+                            <div class="product-price">
+                                <span class="price">R$ 89,90</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 3: Moletom ELEVATION -->
+                <div class="product-card" data-category="moletons" data-price="0" data-name="">
+                    <a href="produto.html?id=3">
+                        <div class="product-image-wrapper">
+                            <div class="product-placeholder">▲</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Moletom ELEVATION</h3>
+                            <p>Moletom com capuz de alta performance. Conforto premium para sua ascensão diária.</p>
+
+                            <div class="product-price">
+                                <span class="price">R$ 159,90</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 4: Boné PEAK -->
+                <div class="product-card" data-category="acessorios" data-price="0" data-name="">
+                    <a href="produto.html?id=4">
+                        <div class="product-image-wrapper">
+                            <div class="product-placeholder">◆</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Boné PEAK</h3>
+                            <p>Boné bordado premium com logo exclusivo ZENITH. O topo começa aqui.</p>
+
+                            <div class="product-price">
+                                <span class="price">R$ 69,90</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product 5: Ecobag ASCEND -->
+                <div class="product-card" data-category="acessorios" data-price="0" data-name="">
+                    <a href="produto.html?id=5">
+                        <div class="product-image-wrapper">
+                            <div class="product-placeholder">✦</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ecobag ASCEND</h3>
+                            <p>Ecobag em canvas premium. Carregue seu sucesso com estilo.</p>
+
+                            <div class="product-price">
+                                <span class="price">R$ 49,90</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ZENITH" class="footer-logo">
+                    <p>ZENITH Streetwear</p>
+                </div>
+                <div class="footer-info">
+                    <p>▦ Frete grátis > R$200</p>
+                    <p>▣ Pagamento seguro</p>
+                    <p>▸ Entrega expressa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH – Todos os direitos reservados</p>
+                <p class="made-with">Alcance seu auge</p>
+                <p class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Política de Privacidade</a>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

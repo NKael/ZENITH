@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Produto | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <section class="section product-page-section">
+        <div class="container">
+            <a href="loja.html" class="back-link">← Voltar para loja</a>
+
+            <div class="product-detail-grid">
+                <div class="product-image-large" id="product-image">★</div>
+
+                <div class="product-detail-info">
+                    <h1 id="product-name">Camiseta APEX</h1>
+                    <p id="product-desc">Camiseta oversized premium com design minimalista.</p>
+                    <span id="product-price" class="product-price-large">R$ 89,90</span>
+
+                    <div class="size-selector-large">
+                        <h3>Selecione o Tamanho:</h3>
+                        <div class="size-options-large" id="sizeOptions">
+                            <button class="size-btn" data-size="P">P</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn active" data-size="G">G</button>
+                            <button class="size-btn" data-size="GG">GG</button>
+                        </div>
+                        <p class="selected-size">Tamanho selecionado: <strong id="selectedSize">G</strong></p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn full-width" onclick="addProductAndCheckout()">Comprar Agora</button>
+                        <button class="btn-secondary full-width" onclick="addProductToCart()">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Abas (Descricao / Frete / Trocas) -->
+            <div class="product-tabs">
+                <button class="tab-btn active" onclick="openTab('tab-desc', this)">Descrição</button>
+                <button class="tab-btn" onclick="openTab('tab-frete', this)">Frete</button>
+                <button class="tab-btn" onclick="openTab('tab-trocas', this)">Trocas</button>
+            </div>
+
+            <div id="tab-desc" class="tab-content active">
+                <p>Produto desenvolvido com matéria-prima premium e acabamento reforçado. Conforto, durabilidade e presença — no nível do seu auge.</p>
+            </div>
+            <div id="tab-frete" class="tab-content">
+                <p>FRETE Frete grátis acima de <strong>R$ 200</strong>. Prazo estimado: <strong>3 a 7 dias úteis</strong> após confirmação do pagamento.</p>
+            </div>
+            <div id="tab-trocas" class="tab-content">
+                <p>↺ Troca/devolução em até <strong>30 dias</strong> após o recebimento, com produto sem uso e com etiquetas originais.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 ZENITH</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

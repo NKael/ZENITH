@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <section class="section checkout">
+        <div class="container">
+            <h2>Finalizar Compra</h2>
+
+            <!-- Barra de Progresso (Adicione esta seção) -->
+            <div class="checkout-progress">
+                <div class="progress-step step-active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Carrinho</div>
+                </div>
+                <div class="progress-step step-active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Informações</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Pagamento</div>
+                </div>
+                <div class="progress-step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Confirmação</div>
+                </div>
+            </div>
+
+            <div class="checkout-grid">
+                <div class="checkout-form-wrapper">
+                    <form class="checkout-form" id="checkoutForm">
+                        <div class="form-section">
+                            <h3>Dados Pessoais</h3>
+                            <input type="text" id="checkout-name" placeholder="Nome completo" required>
+                            <input type="email" id="checkout-email" placeholder="Email" required>
+                            <input type="text" id="checkout-cpf" placeholder="000.000.000-00" required>
+                            <input type="tel" id="checkout-phone" placeholder="(11) 99999-9999" required>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Endereço de Entrega</h3>
+                            <div class="shipping-row">
+                                <input type="text" id="checkout-cep" placeholder="CEP" required>
+                                <button type="button" class="btn-secondary" id="btnCalcShipping">Calcular frete</button>
+                            </div>
+                            <small id="checkout-cep-status" class="field-hint">Digite o CEP para calcular frete e
+                                preencher o endereço automaticamente.</small>
+
+                            <input type="text" id="checkout-street" placeholder="Rua" required>
+                            <div class="address-row">
+                                <input type="text" id="checkout-number" placeholder="Número" required>
+                                <input type="text" id="checkout-complement" placeholder="Complemento">
+                            </div>
+                            <input type="text" id="checkout-neighborhood" placeholder="Bairro" required>
+                            <div class="address-row">
+                                <input type="text" id="checkout-city" placeholder="Cidade" required>
+                                <input type="text" id="checkout-state" placeholder="Estado" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Forma de Pagamento</h3>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cartao" checked>
+                                    <span>💳 Cartão de Crédito</span>
+                                    <small class="payment-hint">Até 3x sem juros</small>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="pix">
+                                    <span>🧾 PIX</span>
+                                    <small class="payment-hint">5% de desconto</small>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="boleto">
+                                    <span>📄 Boleto</span>
+                                    <small class="payment-hint">Pagamento em até 3 dias</small>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <label class="consent">
+                                <input type="checkbox" id="checkout-consent" required>
+                                <span>Li e aceito os <a href="termos.html" target="_blank" rel="noopener">Termos de
+                                        Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política
+                                        de Privacidade</a>.</span>
+                            </label>
+                        </div>
+
+                        <button type="button" class="btn full-width" onclick="pay()">Pagar com Mercado Pago ★</button>
+                    </form>
+                </div>
+
+                <div class="checkout-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <div id="checkout-items"></div>
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">R$ 0,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Frete</span>
+                            <span id="checkout-shipping">Grátis</span>
+                        </div>
+                        <div class="free-shipping-notice" id="checkout-shipping-note">
+                            <span id="checkout-shipping-message">▦ Frete grátis em compras acima de R$ 200</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="checkout-total">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH – Todos os direitos reservados</p>
+                <p class="made-with">Alcance seu auge</p>
+                <p class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Política de Privacidade</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

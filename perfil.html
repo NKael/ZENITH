@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <section class="section profile-section">
+        <div class="container">
+            <h2>Meu Perfil</h2>
+
+            <div class="profile-grid">
+                <!-- User Info Card -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <span id="userInitials">★</span>
+                        </div>
+                        <div class="profile-info">
+                            <h3 id="userName">Elite ZENITH</h3>
+                            <p id="userEmail">usuario@zenith.com</p>
+                            <span class="profile-badge">Membro Premium</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalOrders">0</span>
+                            <span class="stat-label">Pedidos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalSpent">R$ 0,00</span>
+                            <span class="stat-label">Total Gasto</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-secondary full-width" onclick="editProfile()">Editar Perfil</button>
+                </div>
+
+                <!-- Orders Section -->
+                <div class="orders-section">
+                    <div class="orders-header">
+                        <h3>Meus Pedidos</h3>
+                        <select id="orderFilter" onchange="filterOrders()">
+                            <option value="all">Todos</option>
+                            <option value="processing">Em Processamento</option>
+                            <option value="shipped">Enviados</option>
+                            <option value="delivered">Entregues</option>
+                        </select>
+                    </div>
+
+                    <div id="ordersList" class="orders-list">
+                        <!-- Orders will be dynamically loaded here -->
+                    </div>
+
+                    <div id="emptyOrders" class="empty-state">
+                        <div class="empty-icon">▦</div>
+                        <h4>Nenhum pedido ainda</h4>
+                        <p>Comece sua jornada ao topo com produtos ZENITH</p>
+                        <a href="loja.html" class="btn">Explorar Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Profile Modal -->
+    <div id="editModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditProfile()">&times;</span>
+            <h2>Editar Perfil</h2>
+
+            <form class="profile-form" id="editProfileForm">
+                <div class="form-group">
+                    <label for="edit-name">Nome Completo</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-phone">Telefone</label>
+                    <input type="tel" id="edit-phone" placeholder="(00) 00000-0000">
+                </div>
+
+                <button type="submit" class="btn full-width">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ZENITH" class="footer-logo">
+                    <p>ZENITH Streetwear</p>
+                </div>
+                <div class="footer-info">
+                    <p>▦ Frete grátis > R$200</p>
+                    <p>▣ Pagamento seguro</p>
+                    <p>▸ Entrega expressa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH – Todos os direitos reservados</p>
+                <p class="made-with">Alcance seu auge</p>
+                <p class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Política de Privacidade</a>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

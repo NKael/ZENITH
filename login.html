@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="section login-section">
+        <div class="container">
+            <div class="login-box">
+                <h1>Bem-vindo ao ZENITH</h1>
+                <p class="login-subtitle">Faça login para alcançar o topo</p>
+
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn full-width">Entrar ★</button>
+                </form>
+
+                <div class="login-divider">
+                    <span>ou</span>
+                </div>
+
+                <button class="btn-secondary full-width" onclick="showRegister()">Criar Conta</button>
+
+                <p class="login-footer">
+                    Esqueceu sua senha? <a href="#" onclick="alert('Função em desenvolvimento!')">Recuperar</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Modal (Hidden by default) -->
+    <div id="registerModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeRegister()">&times;</span>
+            <h2>Criar Conta ZENITH</h2>
+
+            <form class="login-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-confirm">Confirmar Senha</label>
+                    <input type="password" id="reg-confirm" placeholder="Digite a senha novamente" required>
+                </div>
+
+                <button type="submit" class="btn full-width">Criar Conta ★</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 ZENITH</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

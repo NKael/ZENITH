@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <section class="section faq-section">
+        <div class="container">
+            <h1>Perguntas Frequentes</h1>
+            <p class="section-subtitle">Tire suas dúvidas sobre a ZENITH</p>
+
+            <div class="faq-container">
+                <!-- Pedidos -->
+                <div class="faq-category">
+                    <h2>▦ Pedidos e Entregas</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Qual o prazo de entrega?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Trabalhamos com entrega expressa! O prazo médio é de 3-7 dias úteis para todo o Brasil.
+                                Pedidos acima de R$ 200 ganham frete grátis e prioridade no envio.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como rastreio meu pedido?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Após a confirmação do pagamento, você receberá um email com o código de rastreamento.
+                                Também pode acompanhar seu pedido na página de Perfil → Meus Pedidos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Posso alterar meu pedido após finalizar?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Entre em contato conosco em até 2 horas após a compra. Após esse período, o pedido
+                                já estará em separação e não poderá ser alterado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produtos -->
+                <div class="faq-category">
+                    <h2>👕 Produtos</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como escolher o tamanho certo?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Consulte nosso <a href="tamanhos.html">Guia de Tamanhos</a> completo. Todas as peças
+                                ZENITH seguem o padrão brasileiro. Em caso de dúvida, fale conosco no WhatsApp!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Qual a qualidade dos tecidos?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Utilizamos apenas algodão premium 100% de alta gramatura (195g). Nossas peças são
+                                duráveis, confortáveis e mantêm a cor por muito mais tempo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>As peças encolhem na lavagem?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nossos produtos passam por pré-encolhimento industrial. Seguindo as instruções de
+                                lavagem, você terá mínima variação (menos de 3%).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trocas -->
+                <div class="faq-category">
+                    <h2>↺ Trocas e Devoluções</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Qual o prazo para trocas?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Você tem 30 dias corridos a partir do recebimento para solicitar troca ou devolução. Veja
+                                todos os detalhes na nossa <a href="trocas.html">Política de Trocas</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como faço para trocar?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Entre em contato pelo WhatsApp ou email. Enviaremos o código de postagem reversa sem
+                                custo. A troca é processada em até 5 dias úteis após recebermos o produto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagamento -->
+                <div class="faq-category">
+                    <h2>CARD Pagamento</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Quais formas de pagamento aceitam?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Aceitamos: Cartão de Crédito (até 3x sem juros), PIX (5% de desconto), e Boleto Bancário.
+                                Todos os pagamentos são 100% seguros.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Meu pagamento foi recusado. O que fazer?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Verifique os dados do cartão, limite disponível e tente novamente. Se persistir, entre em
+                                contato com seu banco ou tente outro método de pagamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conta -->
+                <div class="faq-category">
+                    <h2>👤 Conta e Perfil</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Preciso criar conta para comprar?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! A conta ZENITH permite acompanhar pedidos, salvar endereços, acessar histórico de
+                                compras e receber ofertas exclusivas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Esqueci minha senha. Como recupero?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Na tela de login, clique em "Esqueceu sua senha?". Enviaremos um link de recuperação para
+                                seu email cadastrado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <h3>Não encontrou sua resposta?</h3>
+                <p>Entre em contato conosco!</p>
+                <a href="contato.html" class="btn">Falar Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ZENITH" class="footer-logo">
+                    <p>ZENITH Streetwear</p>
+                </div>
+                <div class="footer-info">
+                    <p>▦ Frete grátis > R$200</p>
+                    <p>▣ Pagamento seguro</p>
+                    <p>▸ Entrega expressa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH – Todos os direitos reservados</p>
+                <p class="made-with">Alcance seu auge</p>
+                <p class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Política de Privacidade</a>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const icon = element.querySelector('.faq-icon');
+
+            const isOpen = item.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-icon').textContent = '+';
+            });
+
+            // Toggle current
+            if (!isOpen) {
+                item.classList.add('active');
+                icon.textContent = '−';
+            }
+        }
+    </script>
+</body>
+
+</html>

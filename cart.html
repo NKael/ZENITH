@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho | ZENITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="ZENITH" class="logo-img">
+                <span class="brand">ZENITH</span>
+            </a>
+            <nav class="nav" id="mainNav"></nav>
+        </div>
+    </header>
+
+    <section class="section cart">
+        <div class="container">
+            <h2>Seu Carrinho</h2>
+
+            <div id="empty-cart" class="empty-cart">
+                <div class="empty-cart-icon">•</div>
+                <h2>Seu carrinho está vazio</h2>
+                <p>Adicione produtos premium da coleção ZENITH</p>
+                <a href="loja.html" class="btn">Explorar Coleção</a>
+            </div>
+
+            <div id="cart-content" class="cart-content" style="display: none;">
+                <div class="cart-items" id="cart-items"></div>
+
+                <div class="cart-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="shipping-row">
+                        <input type="text" id="cart-cep" placeholder="Calcular frete (CEP)">
+                        <button type="button" class="btn-secondary" id="btnCartCalcShipping">Calcular</button>
+                    </div>
+                    <small id="cart-cep-status" class="field-hint">Informe seu CEP para estimar frete e prazo.</small>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span id="shipping">—</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">R$ 0,00</span>
+                    </div>
+                    <div class="free-shipping-notice" id="shipping-notice">
+                        ▦ <span id="shipping-message">Frete grátis em compras acima de R$ 200</span>
+                    </div>
+                    <a href="checkout.html" class="btn full-width">Finalizar Compra</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ZENITH" class="footer-logo">
+                    <p>ZENITH Streetwear</p>
+                </div>
+                <div class="footer-info">
+                    <p>▦ Frete grátis > R$200</p>
+                    <p>▣ Pagamento seguro</p>
+                    <p>▸ Entrega expressa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH – Todos os direitos reservados</p>
+                <p class="made-with">Alcance seu auge</p>
+                <p class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Política de Privacidade</a>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
